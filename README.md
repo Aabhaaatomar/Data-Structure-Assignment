@@ -1,6 +1,9 @@
 # Data Structure Assignment
+
 Design a weather data storage system using python and data structures(2D arrays and ADTs).The system should support insertion, deletion, retrieval, row-major and column-major access, sparse data handling, and complexity analysis.
+
 # WeatherRecord ADT
+```python
 class WeatherRecord:
     def _init_(self, date, city, temperature):
         self.date = date
@@ -9,7 +12,7 @@ class WeatherRecord:
 
 
 class WeatherDataStorage:
-    def __init__(self, year_count, city_names, start_year):  # yahan 3 arguments
+    def __init__(self, year_count, city_names, start_year): 
         self.year_count = year_count
         self.cities = city_names
         self.start_year = start_year
@@ -78,7 +81,7 @@ class WeatherDataStorage:
 
 if __name__ == "__main__":
     cities = ["Delhi", "Mumbai", "Chennai"]
-    storage = WeatherDataStorage(5, cities, 2020)  # ab ye arguments lega
+    storage = WeatherDataStorage(5, cities, 2020) 
 
     storage.insert(2020, "Delhi", 32.5)
     storage.insert(2021, "Mumbai", 29.7)
@@ -92,3 +95,4 @@ if __name__ == "__main__":
     
     storage.row_major_access()
     storage.column_major_access()
+```
